@@ -1,0 +1,11 @@
+﻿@foreach (var count in Enumerable.Range(0, Math.Min(ParticleCount, (ushort)200)))
+{
+	<div class="snow" />
+}
+
+@code{
+	/// <summary>
+	/// Amount of snow particles which will be shown. Max and default value is 200.
+	/// </summary>
+	public ushort ParticleCount { get; set; } = 200;
+}
