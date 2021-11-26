@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+	  <Version>1.0.3</Version>
+	  <PackageReleaseNotes>added icon</PackageReleaseNotes>
+	  <PackageProjectUrl>https://github.com/olabacker/BlazorSnow</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/olabacker/BlazorSnow</RepositoryUrl>
+	  <PackageTags>Blazor Snow</PackageTags>
+	  <Description>Enables a magnificent snow effect on your blazor page!</Description>
+	  <Authors>Ola Bäcker</Authors>
+	  <Owners>olabacker</Owners>
+	  <PackageIcon>icon.png</PackageIcon>
+	  <Company />
+	  <Product />
   </PropertyGroup>
 
   
@@ -14,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+	  <None Include="icon.png" Pack="true" PackagePath="\"/>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
