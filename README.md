@@ -8,5 +8,7 @@ Make it snow in any blazor application!
 Usage
 
 ```html
-<Snow ParticleCount="100" />
+<Snow />
 ```
+
+You can customize the particle count using the ParticleCount property.
