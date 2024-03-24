@@ -1,0 +1,25 @@
+name: Build and publish NuGet Package
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'nuget version'
+        required: true
+        type: string
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+
+      - name: Build package
+        run: dotnet pack ./src/BlazorSnow.csproj -p:PackageVersion=${{inputs.version}}  --configuration Release
+
+      - name: Publish package to NuGet
+        run: dotnet nuget push ./src/BlazorSnow/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
