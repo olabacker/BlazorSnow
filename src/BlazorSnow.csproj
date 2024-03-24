@@ -2,7 +2,6 @@
 
     <PropertyGroup>
         <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
-        <Version>1.0.6</Version>
         <PackageReleaseNotes>update tfms</PackageReleaseNotes>
         <PackageProjectUrl>https://github.com/olabacker/BlazorSnow</PackageProjectUrl>
         <RepositoryUrl>https://github.com/olabacker/BlazorSnow</RepositoryUrl>
@@ -13,7 +12,12 @@
         <PackageIcon>icon.png</PackageIcon>
         <Company/>
         <Product/>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="docs\README.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
 
 
     <ItemGroup>
