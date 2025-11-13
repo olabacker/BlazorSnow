@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
     <PropertyGroup>
-        <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+        <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
         <PackageReleaseNotes>update tfms</PackageReleaseNotes>
         <PackageProjectUrl>https://github.com/olabacker/BlazorSnow</PackageProjectUrl>
         <RepositoryUrl>https://github.com/olabacker/BlazorSnow</RepositoryUrl>
@@ -24,8 +24,18 @@
         <SupportedPlatform Include="browser"/>
     </ItemGroup>
 
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0' ">
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.22" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net9.0' ">
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.1" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net10.0' ">
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.0" />
+    </ItemGroup>
+    
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.35" />
+      
     </ItemGroup>
 
     <ItemGroup>
